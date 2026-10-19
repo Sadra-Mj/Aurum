@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0d0c">
+  <meta name="description" content="Aurum Exchange — a considered view of currency. Explore USD, EUR, GBP and TRY reference rates, and follow their value in Turkish lira.">
+  <title>Aurum Exchange — A world of possibility.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="scroll-progress" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M8 3v16m-4-4 4 4 4-4M16 21V5m-4 4 4-4 4 4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6.5h14M5 17.5h14"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 6.1A8 8 0 0 1 19 8l1 4M4 12l1 4a8 8 0 0 0 12.9 1.9"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+</defs></svg>
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="#" aria-label="Aurum Exchange home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 44"><path d="M22 3 41 36H3L22 3Z"/><path d="m22 15 12 21H10l12-21ZM16 26h12"/></svg></span><span>AURUM<small>EXCHANGE</small></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#markets">Markets</a><a href="#difference">The Aurum difference</a><a href="#how-it-works">How it works</a></nav>
+    <a href="#rates" class="button button-outline nav-cta">Exchange rates <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden><a href="#markets">Markets</a><a href="#difference">The Aurum difference</a><a href="#how-it-works">How it works</a><a href="#rates">Exchange rates ↗</a></nav>
+</header>
+<section class="currency-ribbon" id="rates" aria-label="Exchange rates in Turkish lira"><div class="container ribbon-grid">
+    <div class="ribbon-item"><img src="assets/us.svg" alt="" width="30" height="30"><div><span>1 USD <b>US Dollar</b></span><strong><span data-rate="USD">—</span> <small>TRY</small></strong></div></div>
+    <div class="ribbon-item"><img src="assets/eu.svg" alt="" width="30" height="30"><div><span>1 EUR <b>Euro</b></span><strong><span data-rate="EUR">—</span> <small>TRY</small></strong></div></div>
+    <div class="ribbon-item"><img src="assets/gb.svg" alt="" width="30" height="30"><div><span>1 GBP <b>British Pound</b></span><strong><span data-rate="GBP">—</span> <small>TRY</small></strong></div></div>
+  </div><div class="ribbon-meta"><span class="rate-dot" aria-hidden="true"></span><span class="ribbon-data-state" id="rate-status" role="status">Connecting · TRY reference rates</span><button id="refresh-rates" class="refresh-button" aria-label="Refresh exchange rates"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg></button></div></section>
+<main id="main">
+  <section class="hero container" aria-labelledby="hero-heading">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="gold-line"></span> A HIGHER STANDARD OF EXCHANGE</p>
+      <h1 id="hero-heading">A world of<br><em>possibility.</em></h1>
+      <p class="hero-description">Your ambitions cross borders.<br>Your currency should too.</p>
+      <p class="hero-detail">A clearer view of the world's currencies. Explore the rates, understand the market, and make your next move with confidence.</p>
+      <a class="text-link" href="#markets">Explore the markets <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
+
+    </div>
+    <div class="kinetic-scene" aria-label="A gold globe with orbiting currency symbols">
+      <div class="kinetic-art" aria-hidden="true">
+        <div class="globe-aura"></div>
+        <div class="globe-coordinate coordinate-top">THE WORLD IN PERSPECTIVE</div>
+        <canvas id="kinetic-globe" width="880" height="880"></canvas>
+        <div class="currency-orbit orbit-dollar"><span class="currency-node"><span>$</span></span></div>
+        <div class="currency-orbit orbit-euro"><span class="currency-node"><span>€</span></span></div>
+        <div class="currency-orbit orbit-pound"><span class="currency-node"><span>£</span></span></div>
+        <div class="lira-core">₺<span>BEYOND BORDERS</span></div>
+        <span class="orbital-cross cross-one">+</span><span class="orbital-cross cross-two">+</span>
+        <div class="globe-coordinate coordinate-bottom">USD · EUR · GBP · TRY</div>
+      </div>
+      <div class="kinetic-caption"><span><span class="gold-dot"></span> VALUE IN CONSTANT MOTION</span><button id="motion-toggle" type="button" aria-label="Pause globe animation" aria-pressed="false"><span class="motion-control-icon" aria-hidden="true">Ⅱ</span><span class="motion-control-label">Pause motion</span></button></div>
+    </div>
+  </section>
+  <section id="markets" class="section container" aria-labelledby="markets-heading">
+    <div class="section-heading"><div><p class="eyebrow">THE MARKET, IN PERSPECTIVE</p><h2 id="markets-heading">Stay a currency ahead.</h2></div><p class="section-description">A little perspective makes a world of difference.<br>Follow the rates that matter to you.</p></div>
+    <div class="market-grid">
+      <section class="chart-card" aria-labelledby="chart-title">
+        <div class="chart-top"><div><label class="sr-only" for="chart-currency">Currency priced in Turkish lira</label><select id="chart-currency"><option value="USD">USD / TRY</option><option value="EUR">EUR / TRY</option><option value="GBP">GBP / TRY</option></select><p id="chart-title">US Dollar / Turkish Lira</p></div><div class="range-controls" aria-label="Chart time range"><button data-days="7" aria-pressed="false">1W</button><button data-days="30" aria-pressed="true">1M</button><button data-days="90" aria-pressed="false">3M</button></div></div>
+        <div class="chart-value"><strong id="chart-current">—</strong><span id="chart-change">Awaiting market data</span></div>
+        <div id="chart-area" class="chart-area" aria-busy="true"><svg id="rate-chart" viewBox="0 0 650 230" role="img" aria-labelledby="chart-accessible-title"><title id="chart-accessible-title">Currency history is loading</title><defs><linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#cbae70" stop-opacity=".18"/><stop offset="100%" stop-color="#cbae70" stop-opacity="0"/></linearGradient></defs><g id="chart-grid"></g><path id="chart-area-path" fill="url(#chart-fill)"/><path id="chart-line" fill="none" stroke="#d6b979" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle id="chart-last" r="4" fill="#e6cc92" hidden/></svg><p id="chart-message" class="chart-message" role="status">Loading historical rates…</p></div>
+        <div class="chart-dates"><span id="chart-start">—</span><span id="chart-mid">—</span><span id="chart-end">—</span></div>
+        <div class="chart-footnote"><span class="gold-dot" aria-hidden="true"></span> Daily reference rates <span id="chart-period">Last 30 days</span></div>
+      </section>
+      <section class="watchlist" aria-labelledby="watchlist-heading"><div class="watchlist-heading"><h3 id="watchlist-heading">Currency watchlist</h3><span>Per 1 unit · TRY</span></div><div class="watchlist-labels"><span>CURRENCY</span><span>RATE / DAILY CHANGE</span></div>
+        <button class="watchlist-row selected" data-currency="USD" aria-label="View US Dollar in Turkish lira chart" aria-pressed="true"><img src="assets/us.svg" alt="" width="38" height="38"><span class="watchlist-name"><strong>USD</strong><small>US Dollar</small></span><span class="watchlist-value"><strong data-rate="USD">—</strong><small data-change="USD">—</small></span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></button>
+        <button class="watchlist-row" data-currency="EUR" aria-label="View Euro in Turkish lira chart"><img src="assets/eu.svg" alt="" width="38" height="38"><span class="watchlist-name"><strong>EUR</strong><small>Euro</small></span><span class="watchlist-value"><strong data-rate="EUR">—</strong><small data-change="EUR">—</small></span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></button>
+        <button class="watchlist-row" data-currency="GBP" aria-label="View British Pound in Turkish lira chart"><img src="assets/gb.svg" alt="" width="38" height="38"><span class="watchlist-name"><strong>GBP</strong><small>British Pound</small></span><span class="watchlist-value"><strong data-rate="GBP">—</strong><small data-change="GBP">—</small></span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></button>
+        <p class="watchlist-note"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Daily data. Automatically checked every 5 min.</p>
+      </section>
+    </div>
+    <div class="market-source"><span id="market-date">Rate date will appear when connected.</span><span>Indicative mid-market rates. <button class="inline-button" data-info="rates">About our data ↗</button></span></div>
+  </section>
+  <section id="difference" class="difference-section"><div class="container"><div class="section-heading"><div><p class="eyebrow">THE AURUM DIFFERENCE</p><h2>Clarity is a valuable currency.</h2></div><span class="section-index" aria-hidden="true">01 — 03</span></div><div class="principles">
+    <article class="principle"><span class="principle-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span><h3>Global perspective.<br>Everyday relevance.</h3><p>From the dollar to the lira, keep four essential currencies in view. One place to compare their value in Turkish lira and find your bearings.</p><span class="principle-number">01 / CONNECTED</span></article>
+    <article class="principle"><span class="principle-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span><h3>Know the rate.<br>Understand the value.</h3><p>Independent reference data, a visible rate date, and clear estimates. The context you need, without the guesswork.</p><span class="principle-number">02 / TRANSPARENT</span></article>
+    <article class="principle"><span class="principle-icon"><svg class="icon" aria-hidden="true"><use href="#i-swap"/></svg></span><h3>Less friction.<br>More possibility.</h3><p>Three clear quotes, always on view. Follow the dollar, euro, and pound in lira as you explore a considered view of the market.</p><span class="principle-number">03 / EFFORTLESS</span></article>
+  </div></div></section>
+  <section id="how-it-works" class="section container how-section"><div class="how-intro"><p class="eyebrow">SIMPLICITY, BY DESIGN</p><h2>Your next move.<br>In three small steps.</h2><p>Whether you're planning a journey or thinking beyond borders, start with a clearer picture of the lira.</p><a class="text-link" href="#rates">See today's rates <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><ol class="steps"><li><span>01</span><div><h3>See the rates at a glance</h3><p>USD, EUR, and GBP are always displayed in Turkish lira. No amounts to enter, no currencies to switch.</p></div></li><li><span>02</span><div><h3>Know what one unit is worth</h3><p>Each quote shows the value of one dollar, euro, or pound in TRY, with the latest available reference date.</p></div></li><li><span>03</span><div><h3>See the bigger picture</h3><p>Select a currency and a time period to explore how its value in Turkish lira has changed.</p></div></li></ol></section>
+  <section class="container faq-section" aria-labelledby="faq-heading"><div><p class="eyebrow">A LITTLE MORE CLARITY</p><h2 id="faq-heading">Good questions.<br>Clear answers.</h2></div><div class="faq-list"><details><summary>How often are exchange rates updated?<span aria-hidden="true">+</span></summary><p>We check Frankfurter for fresh data when you open this page and every five minutes while it is visible. The underlying reference rates are published daily, rather than continuously. Weekends and holidays may show the last available business day's rate. You can also refresh manually.</p></details><details><summary>Is this the rate I will receive at an exchange?<span aria-hidden="true">+</span></summary><p>These are indicative mid-market reference rates. An exchange provider may apply a spread, commission, or other fees. Always confirm the final rate and total cost with your provider before exchanging money.</p></details><details><summary>Can I exchange or transfer money here?<span aria-hidden="true">+</span></summary><p>This website lets you explore currency rates in Turkish lira. It does not accept deposits, process exchanges, or transfer money. The displayed rates are references, not binding quotes.</p></details><details><summary>What if my connection is interrupted?<span aria-hidden="true">+</span></summary><p>If available, the last successfully loaded rates are saved in your browser and clearly marked as cached. Without saved rates, the site shows an unavailable state instead of invented prices. Use the refresh button to try again.</p></details></div></section>
+  <section class="container"><div class="closing-banner"><div><p class="eyebrow">THE WORLD DOESN'T STAND STILL.</p><h2>Neither should your perspective.</h2></div><a class="button button-dark" href="#rates">Find your next possibility <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><span class="banner-orbit" aria-hidden="true"></span></div></section>
+</main>
+<footer class="site-footer container"><div class="footer-top"><a class="brand" href="#" aria-label="Aurum Exchange home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 44"><path d="M22 3 41 36H3L22 3Z"/><path d="m22 15 12 21H10l12-21ZM16 26h12"/></svg></span><span>AURUM<small>EXCHANGE</small></span></a><p>A world of currencies.<br>A higher standard of clarity.</p><a href="#main" class="back-top">Back to top <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a></div><div class="footer-bottom"><span>© <span id="year">2026</span> Aurum Exchange. A concept website.</span><div><button data-info="privacy">Privacy</button><button data-info="terms">Terms of use</button><a href="https://frankfurter.dev" target="_blank" rel="noopener noreferrer">Data source ↗</a></div></div><p class="footer-disclaimer">For information only. Rates are indicative and exclude provider fees. No financial transactions are processed on this website.</p></footer>
+<dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><button class="dialog-close" aria-label="Close dialog"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button><p class="eyebrow" id="dialog-eyebrow">A CLEARER PICTURE</p><h2 id="dialog-title">About our rates</h2><div id="dialog-content"></div></div></dialog>
+<noscript><div class="noscript-note">Enable JavaScript to load the exchange rate board. You can still explore the rest of the page.</div></noscript>
+</body>
+</html>
